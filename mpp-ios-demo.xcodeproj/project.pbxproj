@@ -14,6 +14,9 @@
 		ABA2317124BD8C0700DA78C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA2317024BD8C0700DA78C9 /* Assets.xcassets */; };
 		ABA2317424BD8C0700DA78C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA2317224BD8C0700DA78C9 /* LaunchScreen.storyboard */; };
 		ABA2317F24BD8C0700DA78C9 /* mpp_ios_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA2317E24BD8C0700DA78C9 /* mpp_ios_demoTests.swift */; };
+		ABA2319024BD8D9500DA78C9 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA2318F24BD8D9500DA78C9 /* UI.swift */; };
+		ABA2319424BD966C00DA78C9 /* DEH_MPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA2318B24BD8C4700DA78C9 /* DEH_MPP.framework */; };
+		ABA2319524BD966C00DA78C9 /* DEH_MPP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABA2318B24BD8C4700DA78C9 /* DEH_MPP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,20 @@
 			remoteInfo = "mpp-ios-demo";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ABA2319624BD966C00DA78C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ABA2319524BD966C00DA78C9 /* DEH_MPP.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		ABA2316424BD8C0600DA78C9 /* mpp-ios-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mpp-ios-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +55,9 @@
 		ABA2317A24BD8C0700DA78C9 /* mpp-ios-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mpp-ios-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA2317E24BD8C0700DA78C9 /* mpp_ios_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mpp_ios_demoTests.swift; sourceTree = "<group>"; };
 		ABA2318024BD8C0700DA78C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABA2318B24BD8C4700DA78C9 /* DEH_MPP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DEH_MPP.framework; path = "../mpp-accounts-mobile/build/xcode-frameworks/DEH_MPP.framework"; sourceTree = "<group>"; };
+		ABA2318F24BD8D9500DA78C9 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		ABA2319724BD967F00DA78C9 /* DEH_MPP.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = DEH_MPP.framework.dSYM; path = "../mpp-accounts-mobile/build/xcode-frameworks/DEH_MPP.framework.dSYM"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA2319424BD966C00DA78C9 /* DEH_MPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +85,7 @@
 				ABA2316624BD8C0600DA78C9 /* mpp-ios-demo */,
 				ABA2317D24BD8C0700DA78C9 /* mpp-ios-demoTests */,
 				ABA2316524BD8C0600DA78C9 /* Products */,
+				ABA2318A24BD8C4700DA78C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +108,7 @@
 				ABA2317024BD8C0700DA78C9 /* Assets.xcassets */,
 				ABA2317224BD8C0700DA78C9 /* LaunchScreen.storyboard */,
 				ABA2317524BD8C0700DA78C9 /* Info.plist */,
+				ABA2318F24BD8D9500DA78C9 /* UI.swift */,
 			);
 			path = "mpp-ios-demo";
 			sourceTree = "<group>";
@@ -99,6 +122,15 @@
 			path = "mpp-ios-demoTests";
 			sourceTree = "<group>";
 		};
+		ABA2318A24BD8C4700DA78C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABA2319724BD967F00DA78C9 /* DEH_MPP.framework.dSYM */,
+				ABA2318B24BD8C4700DA78C9 /* DEH_MPP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABA2318324BD8C0700DA78C9 /* Build configuration list for PBXNativeTarget "mpp-ios-demo" */;
 			buildPhases = (
+				ABA2318924BD8C1300DA78C9 /* gradle :packForXcode */,
 				ABA2316024BD8C0600DA78C9 /* Sources */,
 				ABA2316124BD8C0600DA78C9 /* Frameworks */,
 				ABA2316224BD8C0600DA78C9 /* Resources */,
+				ABA2319624BD966C00DA78C9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,12 +229,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ABA2318924BD8C1300DA78C9 /* gradle :packForXcode */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "gradle :packForXcode";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd /Volumes/Data/Dev/Finastra/mpp-accounts-mobile && gradle :packForXcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABA2316024BD8C0600DA78C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ABA2316C24BD8C0600DA78C9 /* ViewController.swift in Sources */,
+				ABA2319024BD8D9500DA78C9 /* UI.swift in Sources */,
 				ABA2316824BD8C0600DA78C9 /* AppDelegate.swift in Sources */,
 				ABA2316A24BD8C0600DA78C9 /* SceneDelegate.swift in Sources */,
 			);
@@ -363,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Volumes/Data/Dev/Finastra/mpp-accounts-mobile/build/bin/ios/DEH-MPPDebugFramework";
 				INFOPLIST_FILE = "mpp-ios-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "/Volumes/Data/Dev/Finastra/mpp-accounts-mobile/build/bin/ios/DEH-MPPReleaseFramework";
 				INFOPLIST_FILE = "mpp-ios-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
